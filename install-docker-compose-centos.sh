@@ -17,7 +17,7 @@ yum-config-manager \
     
 yum -y update
 
-yum --nobest install docker-ce docker-ce-cli containerd.io
+yum --nobest -y install docker-ce docker-ce-cli containerd.io
 
 systemctl enable docker
 systemctl start docker
