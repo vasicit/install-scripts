@@ -25,8 +25,21 @@ yum-config-manager \
 # Install Docker
 yum -y --nobest install docker-ce docker-ce-cli containerd.io
 
+# Enable Docker service at startup
+systemctl enable --now docker
+
 # Show Docker version to confirm installation
 docker -v
+
+# Download Docker Compose and place in bin directory
+curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+# Make docker-compose executable
+chmod +x /usr/local/bin/docker-compose
+
+# Verify installation by showind docker-compose version
+docker-compose -v
+
 
 
 
