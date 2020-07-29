@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Enable IP Forwarding
+echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
+/sbin/sysctl -p
+
 # Remove any previously installations of Docker
 yum remove docker \
                   docker-client \
