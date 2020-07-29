@@ -19,7 +19,7 @@ yum-config-manager \
     https://download.docker.com/linux/centos/docker-ce.repo
     
 # Install Docker
-yum install docker-ce docker-ce-cli containerd.io
+yum -y --nobest install docker-ce docker-ce-cli containerd.io
 
 # Show Docker version to confirm installation
 docker -v
