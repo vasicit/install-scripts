@@ -37,7 +37,7 @@ curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compo
 # Make docker-compose executable
 chmod +x /usr/local/bin/docker-compose
 
-# Verify installation by showind docker-compose version
+# Verify installation by showing docker-compose version
 docker-compose -v
 
 
