@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Remove any previously installations of Docker
 yum remove docker \
                   docker-client \
                   docker-client-latest \
@@ -8,22 +9,22 @@ yum remove docker \
                   docker-latest-logrotate \
                   docker-logrotate \
                   docker-engine
-                  
+
+# Install the yum-utils package (which provides the yum-config-manager utility) and set up the stable repository.
 yum install -y yum-utils
 
+# Add Docker repository
 yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo
     
-yum -y update
+# Install Docker
+yum install docker-ce docker-ce-cli containerd.io
 
-yum --nobest -y install docker-ce docker-ce-cli containerd.io
+# Show Docker version to confirm installation
+docker -v
 
-systemctl enable docker
-systemctl start docker
 
-curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-chmod +x /usr/local/bin/docker-compose
 
-docker-compose --version
+
