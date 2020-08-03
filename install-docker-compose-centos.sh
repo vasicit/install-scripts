@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Install and enable unattended upgrades
+dnf install dnf-automatic
+systemctl enable --now dnf-automatic.timer
+
 # Enable IP Forwarding
 echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 /sbin/sysctl -p
