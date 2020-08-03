@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Install and enable unattended upgrades
-dnf install dnf-automatic
+dnf -y install dnf-automatic
 systemctl enable --now dnf-automatic.timer
 
 # Enable IP Forwarding
