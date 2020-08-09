@@ -7,6 +7,13 @@
 sudo setenforce 0
 # Open /etc/selinux/config and modify file to include SELINUX=disabled
 
+# Disable IPv6
+sysctl -w net.ipv6.conf.all.disable_ipv6=1
+
+# Set FQDN in /etc/hosts
+dnf -y install nano
+nano /etc/hosts
+
 # NOW REBOOT
 
 # Disable Firewall
@@ -16,5 +23,9 @@ systemctl restart NetworkManager
 
 # Install Perl prerequisite for Zimbra
 dnf -y update && dnf install perl
+
+# Download Zimbra from URL
+dnf -y install wget
+
 
 
