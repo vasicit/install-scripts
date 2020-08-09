@@ -14,3 +14,7 @@ service firewalld stop
 systemctl disable firewalld
 systemctl restart NetworkManager
 
+# Install Perl prerequisite for Zimbra
+dnf -y update && dnf install perl
+
+
