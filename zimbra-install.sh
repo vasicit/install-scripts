@@ -27,5 +27,9 @@ dnf -y update && dnf install perl
 # Download Zimbra from URL
 dnf -y install wget
 
+# Appent IP FQDN to /etc/hosts and restart network 
+# echo "IP FQDN" > /etc/hosts
+systemctl restart NetworkManager
+
 
 
