@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Zimbra 9 OSS Zextras Version installation on CentOS 8
 
 # MAKE SURE TO CREATE LARGE /opt/zimbra PARTITION IN CUSTOM PARTITIONING 
