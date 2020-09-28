@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Zimbra performance tuning script compiled from http://blog.jeshurun.ca/technology/zimbra-8-7-low-memory-ram-performance-tuning
+
 zmlocalconfig -e mailboxd_java_heap_size=1024
 zmlocalconfig -e mailboxd_java_heap_new_size_percent=15
 zmlocalconfig -e mysql_memory_percent=15
