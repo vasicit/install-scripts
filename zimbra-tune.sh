@@ -14,6 +14,8 @@ zmprov ms `zmhostname` zimbraMessageCacheSize 2000
 zmlocalconfig -e zmconfigd_interval=3600
 zmprov mcf zimbraLogRawLifetime 7d
 zmprov mcf zimbraLogSummaryLifetime 30d
+sed -i 's/\(^innodb_buffer_pool_size\).*/\innodb_buffer_pool_size = 1073741824/' /opt/zimbra/conf/my.cnf
+
 
 
 
