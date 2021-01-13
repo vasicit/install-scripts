@@ -24,7 +24,7 @@ add-apt-repository \
    stable"
    
 # Install Docker engine
-apt-get update && apt-get -y install docker-ce docker-ce-cli containerd.io
+apt-get -y update && apt-get -y install docker-ce docker-ce-cli containerd.io
 
 # Verify successful Docker engine installation with HelloWorld
 docker run hello-world
