@@ -12,7 +12,8 @@ apt-get -y install \
     ca-certificates \
     curl \
     gnupg-agent \
-    software-properties-common
+    software-properties-common \
+    git
     
 # Add Docker’s official GPG key
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
