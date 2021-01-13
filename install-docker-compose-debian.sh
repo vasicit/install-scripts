@@ -4,10 +4,10 @@
 apt-get -y update && apt-get -y upgrade
 
 # Uninstall old versions of Docker
-apt-get remove docker docker-engine docker.io containerd runc
+apt-get -y remove docker docker-engine docker.io containerd runc
 
 # Install necessary software for setting up Docker repository
-apt-get install \
+apt-get -y install \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -24,7 +24,7 @@ add-apt-repository \
    stable"
    
 # Install Docker engine
-apt-get update && apt-get install docker-ce docker-ce-cli containerd.io
+apt-get update && apt-get -y install docker-ce docker-ce-cli containerd.io
 
 # Verify successful Docker engine installation with HelloWorld
 docker run hello-world
