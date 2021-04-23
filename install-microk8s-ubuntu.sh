@@ -11,6 +11,7 @@ else
     microk8s enable dns dashboard storage ingress
     for folder in /home/
     do
+      touch $folder/.bash_aliases   
       echo 'alias kubectl="sudo microk8s kubectl"' >> $folder/.bash_aliases
       echo 'alias kc="sudo microk8s kubectl"' >> $folder/.bash_aliases
     done
