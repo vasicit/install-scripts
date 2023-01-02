@@ -22,3 +22,5 @@ apt-get update
 
 #Install Docker Engine, containerd, and Docker Compose
 apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+#Install with curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
